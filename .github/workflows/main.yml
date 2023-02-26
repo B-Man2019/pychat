@@ -38,3 +38,4 @@ jobs:
         host: ${{ secrets.REMOTE_HOST }}
         user: ${{ secrets.REMOTE_USER }}
         key: ${{ secrets.SSH_KEY }}
+        args: "-tt -vvv"
