@@ -1,10 +1,10 @@
-name: Deply PyChat on production server
+name: Deploy PyChat on production server
 
 # Controls when the action will run. Triggers the workflow on any release updates (the workflow will only (re)deploy the latest tag though)
 on:
   push:
     branches:
-      - main
+      - master
     tags:
       - v1.*
 
@@ -38,3 +38,4 @@ jobs:
         host: ${{ secrets.REMOTE_HOST }}
         user: ${{ secrets.REMOTE_USER }}
         key: ${{ secrets.SSH_KEY }}
+        args: "-tt -vvv"
